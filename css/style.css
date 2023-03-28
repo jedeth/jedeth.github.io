@@ -1,0 +1,21 @@
+body {
+  font-size: 16px;
+  color: black;
+  background-color: #dec983;
+  font-family: 'Oxygen', sans-serif;
+  margin: 20px 20px 20px 20px;
+}
+h1 {
+  color: black;
+  text-align: center;
+} 
+a:link, a:hover {
+  color: red;
+  background-color: #dec981;
+}
+.bleue {
+  color: #a38933;
+}
+/*#titre {
+  color: yellow;
+}*/

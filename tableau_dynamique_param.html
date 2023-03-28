@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tableau dynamique avec paramètres</title>
+<style>
+#div1 {margin:10px;font-size:1.25em;}
+table {border-collapse:collapse;border:1px solid #7f7f7f;}
+td {border:1px solid #7f7f7f;width:50px;height:50px;text-align:center;}
+    
+</style>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div id="div1"></div>
+
+<script>
+// var str = window.AppInventor.getWebViewString();
+var str = '3;2;"44";"ee";"gg";"jj";;';
+var words = str.split(';');
+
+var totalRows = words[0]; 
+var cellsInRow = words[1];
+var position = 2;
+
+    function drawTable() 
+    {
+        // get the reference for the body
+        var div1 = document.getElementById('div1');
+ 
+        // creates a <table> element
+        var tbl = document.createElement("table");
+ 
+        // creating rows
+        for (var r = 0; r < totalRows; r++) 
+        {
+            var row = document.createElement("tr");
+	     
+	           // create cells in row
+             for (var c = 0; c < cellsInRow; c++) 
+             {
+                var cell = document.createElement("td");		         
+                var cellText = document.createTextNode(words[position]);
+                position++;
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+             }           
+            
+	           tbl.appendChild(row); // add the row to the end of the table body
+        }
+    
+          div1.appendChild(tbl); // appends <table> into <div1>
+      }
+window.onload=drawTable; 
+</script>
+</body>
+</html>
