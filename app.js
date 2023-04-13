@@ -1,13 +1,16 @@
 (function () {
-'use strict';
+    'use strict';
 
-angular.module('LunchCheck', [])
+    angular.module('LunchCheck', [])
 
-.controller('LunchCheckController', DILunchCheckController);
-    DILunchCheckController.$inject = ['$scope'];
-    function DILunchChekController($scope) {
-        .split(',')
+    .controller('LunchCheckController', function($scope){
+            $scope.repas = "";
+            $scope.nombreDePlats = calculatriceNombreDePlats($scope.repas);
 
-    }
+        // function calculatriceNombreDeRepas(string){
+        //     var totalNombreDeRepas = split();
+            
+        // }
+            console.log (scope.repas);
 
 })();
