@@ -5,7 +5,7 @@
 
     .controller('LunchCheckController', function ($scope){
         console.log('ici !!!')
-            $scope.repas = "fff,eee,rr,,r";
+            $scope.repas = "tototot,,r";
             // var Plats = $scope.repas; 
             $scope.alerte = calculNbPlats($scope.repas);
 
